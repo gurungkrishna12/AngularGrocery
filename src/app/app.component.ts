@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularGrocery';
+  title = 'Grocery List';
+  todoList= [] as any [];
+  todoItem = '';
+
+  addItem(){
+    this.todoList.push(this.todoItem)
+  }
+  deleteItem(index: number){
+    this.todoList.splice(index, 1)
+  }
 }
+
+
+
+
+
